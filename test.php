@@ -2,9 +2,9 @@
 echo"Hi <b>Brooke</b>, you are late ";
 echo"and you are too coen!!!<br> ";
 
-echo $_GET . "<br>";
-print_r($_GET);
-echo "Hello " . $_GET["name"];
+
+print_r($_GET) . "<br>";
+echo "Hello " . $_GET["name"] . "<p>";
 
 foreach ($_GET as $id => $val){
     echo $id . "==>" . $val . "<br>";
