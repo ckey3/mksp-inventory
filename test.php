@@ -10,7 +10,7 @@ foreach ($_GET as $id => $val){
     echo $id . "==>" . $val . "<br>";
 }
 
-echo '<input type="button" value="Say Hi!"' >;
+echo '<input type="button" value="Say Hi!">';
 
 
 $f=fopen("test.json", "a");#open file
