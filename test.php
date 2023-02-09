@@ -11,7 +11,7 @@ foreach ($_GET as $id => $val){
 }
 
 echo '<input type="button" value="Say Hi!">';
-
+ 
 
 $f=fopen("test.json", "a");#open file
 fwrite($f, "this is a file.");#write something
