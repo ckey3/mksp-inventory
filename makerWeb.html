@@ -12,7 +12,7 @@
 
         Name: 
         <br><input
-            type ="text" id="name"
+            type ="text" id="rName"
                 placeholder="Name">
             <!-- this is an input box-->
 
@@ -48,7 +48,7 @@
        function recordOrder(){
 
         let data = {};
-        data['requester'] = "name.value";
+        data['requester'] = rName.value;
         data['wood'] = Wood.value;
         data['quantity'] = quantity.value;
         
