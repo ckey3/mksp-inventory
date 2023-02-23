@@ -9,7 +9,7 @@ $data = json_decode($json);
 echo json_encode($data);
 
 $file = fopen('orderData.json', 'a');
-fwrite($file, json_encode($data),"\n");
+fwrite($file, json_encode($data)."\n");
 fclose($file);
 
 ?>
