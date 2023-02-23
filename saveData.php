@@ -8,7 +8,7 @@ $data = json_decode($json);
 //sends data back to the client that sent it
 echo json_encode($data);
 
-$file = fopen("orderData", "a");
+$file = fopen('orderData.json', 'a');
 fwrite($file, json_encode($data),"\n");
 fclose($file);
 
