@@ -16,6 +16,7 @@
                 placeholder="Name">
             <!-- this is an input box-->
 
+        
         <div>
             Wood:
             <select>
@@ -40,14 +41,31 @@
     </body>
 
     <script>
+        //SUBMIT BUTTON
        submitBut = document.getElementById("submit");
        submitBut.addEventListener("click", recordOrder);
 
        function recordOrder(){
+
+        let data = {};
+        data['requester'] = name.value;
+        data['wood'] = Wood.value;
+        data['quantity'] = quantity.value;
+        
+        xR = new XMLHttpRequest();
+        xR.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200){
+
+                console.log("Server:", this.responseText);
+
+            }
+        }
+        xR.open("POST", "saveData.php", true);
+        xR.send(JSON.stringify(data));
         //collect info from webpage
-        info ={};
-        info["name"] = document.getElementById('name').value;
-        console.log(info);
+        //info ={};
+        //info["name"] = document.getElementById('name').value;
+        //console.log(info);
        }
 
 
