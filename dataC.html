@@ -2,7 +2,7 @@
 <html>
 <body>
 
-
+<div id ="p"></div>
 
 </body>
 
@@ -18,6 +18,9 @@
     .then(function (body) {
       console.log(body);
     });
+
+    x = document.getElementById(p)
+    x.inerHTML = data
   
     xR = new XMLHttpRequest();
     xR.onreadystatechange = function(){
