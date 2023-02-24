@@ -7,11 +7,9 @@
 </body>
 
 <script>
-    
+
      let data = {};
-        data['requester'] = rName.value;
-        data['wood'] = Wood.value;
-        data['quantity'] = quantity.value;
+       
 
     fetch('orderData.json')
     .then(function (response) {
